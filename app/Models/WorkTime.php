@@ -9,7 +9,7 @@ class WorkTime extends Model
 {
     use HasFactory;
 
-    public function scopeStaffElual($query, $staffs)
+    public function scopeStaffEqual($query, $staffs)
     {
         return $query -> where('staff_id',$staffs);
     }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('stamp', 'StaffController@index');
+Route::get('/stamp', [StaffController::class, 'index']);
 
 Route::get('work_time/index','WorkTimeController@index');
 
