@@ -8,6 +8,6 @@ class ScopeStaff implements Scope
 {
   public function apply(Builder $builder, Model $model)
   {
-    $builder->where('deleted_flg','0');
+    $builder->where('deleted_flg',0);
   }
 }

@@ -20,12 +20,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/stamp', [StaffController::class, 'index']);
 
-Route::get('work_time/index','WorkTimeController@index');
+Route::get('/work_time/index', [WorkTimeController::class, 'index']);
 
-Route::get('work_time/edit','WorkTimeController@edit');
+Route::get('work_time/edit', 'WorkTimeController@edit');
 
-Route::get('admin/work_time_index','AdminController@work_time_index');
+Route::get('admin/work_time_index', 'AdminController@work_time_index');
 
-Route::get('admin/work_time_show','AdminController@work_time_show');
+Route::get('admin/work_time_show', 'AdminController@work_time_show');
 
-Route::get('admin/request_index','AdminController@request_index');
+Route::get('admin/request_index', 'AdminController@request_index');

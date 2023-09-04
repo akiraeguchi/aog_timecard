@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Scopes\ScopeStaff;
-use App\Models\WorkTime;
+use App\Models\T_Work_Time;
 
 class M_Staff extends Model
 {
     use HasFactory;
 
-    public function staffs(){
-        return $this->hasMany(WorkTime::class);
+    public function worktimes()
+    {
+        return $this->hasMany('App\Models\T_Work_Time','staff_id','staff_id');
     }
 
     //グローバルスコープを呼び出し
@@ -23,4 +24,5 @@ class M_Staff extends Model
     }
 
     protected $table = "M_staff";
+    protected $primaryKey = 'staff_id';
 }
